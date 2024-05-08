@@ -247,7 +247,7 @@ body {
   display: flex;
   gap: 10px;
 }
-#app-container #right-section #player-container #song-play-detail #img-play-song img {
+#app-container #right-section #player-container #song-play-detail #img-play-song {
   width: 60px;
 }
 #app-container #right-section #player-container #song-play-detail #song-title-artist-container {
