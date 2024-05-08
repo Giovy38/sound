@@ -1,0 +1,339 @@
+@import './colors';
+@import './utilies';
+@import './media-queries';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: $bg;
+    @include fontFamily;
+}
+
+#app-container{
+
+    @include intermediate{
+        display: flex;
+        align-items: center;
+        
+    }
+
+    #left-section{
+        @include flexCenter;
+        padding: 10px;
+        flex-direction: column;
+        gap: 20px;
+
+        @include intermediate{
+            height: 100vh;
+            padding: 0 10px;
+        }
+
+        #primary-container{
+            background: $container-bg;
+            width: 90vw;
+            height: 20vh;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+
+            @include intermediate{
+                width: 20vw;
+            }
+
+           
+            #logo-container{
+               @include flexCenter;
+                gap: 20px;
+    
+                #logo-img{
+                    width: 50px;
+                    border-radius: 100%;
+                }
+    
+                #logo-title{
+                    color: $icon-color;
+                }
+            }
+    
+            .icon-div{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: $icon-color;
+                font-size: 25px;
+                text-transform: capitalize;
+                cursor: pointer;
+            }
+    
+        }
+    
+        #library-container{
+            background: $container-bg;
+            width: 90vw;
+            border-radius: 20px;
+
+            @include intermediate{
+                width: 20vw;
+            }
+    
+            // icon div 
+    
+            .icon-div{
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 15px;
+                font-size: 15px;
+                color: $icon-color;
+    
+                .left-div{
+                    display: flex;
+                    align-items: center;
+                }
+    
+                i, p{
+                    cursor: pointer;
+                }
+            }
+    
+            // option container
+    
+            #option-container{
+                @include flexCenter;
+                margin: 10px 0 ;
+                gap: 10px;
+
+                @include intermediate{
+                    gap: 5px;
+                    padding: 5px;
+                }
+
+                .option{
+                    @include flexCenter;
+                    background-color: $container-bg-hover;
+                    border-radius: 10px;
+                    width: 18vw;
+                    color: $icon-color;
+
+                    @include intermediate{
+                        width: 8vw;
+                    }
+    
+                    &:hover{
+                        cursor: pointer;
+                        background-color: $container-bg-hover-light;
+                        color: $gdark-text;
+                    }
+                }
+            }
+    
+            .right-div{
+                @include flexCenter;
+                gap: 10px;
+            }
+    
+            // recent container
+            #recent-container{
+                padding: 0 0 10px 10px ;
+    
+                .single-recent{
+                    display: flex;
+                    align-items: center;
+                    border-radius: 10px;
+    
+                    &:hover{
+                        background: $container-bg-hover;
+                        cursor: pointer;
+                    }
+                    .left-recent{
+                        img{
+                            width: 60px;
+                            border-radius: 10px;
+                        }
+                    }
+    
+                    .right-recent{
+                        margin-left: 20px;
+                        
+                        .recent-title{
+                            color: $wtext;
+                            text-transform: capitalize;
+                        }
+    
+                        .subtitle{
+                            display: flex;
+                            align-items: center;
+                            color: $icon-color;
+                            gap: 5px;
+                            font-size: 12px;
+    
+                            .bx{
+                                font-size: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+    
+    #right-section{
+        margin-bottom: 50px;
+        @include flexCenter;
+        flex-direction: column;
+
+        @include intermediate{
+            align-items: flex-start;
+        }
+
+        #right-section-title{
+            color: $wtext;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+
+            @include intermediate {
+                width: 75vw;
+            }
+        }
+    
+        #song-container{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: $container-bg;
+            width: 90vw;
+            border-radius: 20px;
+            padding: 15px 10px;
+
+
+            @include intermediate{
+                height: 500px;
+                width: 75vw;
+            }
+    
+    
+    
+           .single-song{
+            display: flex;
+            gap: 10px;
+            cursor: pointer;
+            max-height: 106px;
+            border-radius: 10px;
+            overflow: hidden;
+    
+            &:hover{
+            background: $container-bg-hover;
+    
+            }
+    
+            .left-img{
+                img{
+                    height: 105px;
+                }
+            }
+    
+            .right-info{
+                color: $icon-color;
+                padding: 10px 0;
+                text-transform: capitalize;
+    
+                .song-title{
+                    font-size: 20px;
+                    color: $wtext;
+                }
+            }
+           }
+        }
+
+        #player-container{
+            margin-top: 30px;
+            padding-top: 15px;
+            color: $icon-color;
+            background: $container-bg;
+            width: 90vw;
+            border-radius: 20px;
+            @include flexCenter;
+            flex-direction: column;
+
+            @include intermediate{
+                width: 75vw;
+            }
+
+            #song-play-detail{
+                display: flex;
+                gap: 10px;
+
+                #img-play-song{
+                    img{
+                        width: 60px;
+                    }
+                }
+
+                #song-title-artist-container{
+                    text-transform: capitalize;
+
+                    #song-play-title{
+                        font-size: 20px;
+                        color: $wtext;
+                    }
+
+                    #song-play-artist{
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .time-container{
+
+                
+                #progress{
+                    -webkit-appearance: none; 
+                    appearance: none;
+                    width: 250px;
+                    height: 6px;
+                    background: $icon-color;
+                    border-radius: 4px;
+                    cursor: pointer;
+
+                    &::-webkit-slider-thumb {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 10px; 
+                        height: 10px; 
+                        border-radius: 100%;
+                        background: $range-cursor; 
+                        cursor: pointer; 
+                      }
+
+                     
+                }
+            }
+
+            .icon-container{
+                font-size: 30px;
+                @include flexCenter;
+
+
+                .bx{
+                    cursor: pointer;
+
+                    &:hover{
+                        color: $range-cursor;
+                    }
+                }
+
+                #ctrlIcon{
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+}
