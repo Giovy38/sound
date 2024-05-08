@@ -2,6 +2,12 @@ let progress = document.getElementById("progress");
 let ctrlIcon = document.getElementById("ctrlIcon");
 let song = document.getElementById("song");
 
+// set time to playing song
+let currentTimePlaying = document.getElementById("current-time");
+let songDuration = document.getElementById("song-duration");
+
+// add click event on play
+
 ctrlIcon.addEventListener("click", onPlay);
 
 function songLoad() {
@@ -18,8 +24,6 @@ function onPlay() {
       song.play();
       ctrlIcon.classList.add("bx-pause");
       ctrlIcon.classList.remove("bx-play");
-      progress.max = song.duration;
-      progress.value = song.currentTime;
     }
   } else {
     alert("select a song from list before play");
@@ -29,6 +33,14 @@ function onPlay() {
 if (song.play()) {
   setInterval(() => {
     progress.value = song.currentTime;
+    progress.max = song.duration;
+    // set current time
+    let timeSet = song.currentTime / 60;
+    currentTimePlaying.textContent = parseFloat(timeSet.toFixed(2).toString());
+
+    // set total time
+    let durationSet = song.duration / 60;
+    songDuration.textContent = parseFloat(durationSet.toFixed(2).toString());
   }, 500);
 }
 

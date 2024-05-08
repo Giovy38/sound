@@ -253,7 +253,12 @@
                     <audio id="song">
                         <source id="source" src="" type="audio/mpeg">
                     </audio>
-                    <input id="progress" type="range" value="0">
+                    <div id="progress-container">
+                        <p id="current-time" class="time-details"></p>
+                        <input id="progress" type="range" value="0">
+                        <p id="song-duration" class="time-details"></p>
+                    </div>
+                    
                 </div>
                 <div class="icon-container">
                     <i class='bx bx-chevrons-left'></i>

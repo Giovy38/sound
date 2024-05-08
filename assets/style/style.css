@@ -260,7 +260,19 @@ body {
 #app-container #right-section #player-container #song-play-detail #song-title-artist-container #song-play-artist {
   font-size: 15px;
 }
-#app-container #right-section #player-container .time-container #progress {
+#app-container #right-section #player-container .time-container #progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+  margin-top: 10px;
+}
+@media screen and (min-width: 1226px) {
+  #app-container #right-section #player-container .time-container #progress-container {
+    flex-direction: row;
+  }
+}
+#app-container #right-section #player-container .time-container #progress-container #progress {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -270,7 +282,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
-#app-container #right-section #player-container .time-container #progress::-webkit-slider-thumb {
+#app-container #right-section #player-container .time-container #progress-container #progress::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 10px;
@@ -278,6 +290,9 @@ body {
   border-radius: 100%;
   background: #04AA6D;
   cursor: pointer;
+}
+#app-container #right-section #player-container .time-container #progress-container .time-details {
+  font-size: 12px;
 }
 #app-container #right-section #player-container .icon-container {
   font-size: 30px;

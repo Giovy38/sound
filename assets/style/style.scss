@@ -292,27 +292,43 @@ body{
 
             .time-container{
 
-                
-                #progress{
-                    -webkit-appearance: none; 
-                    appearance: none;
-                    width: 250px;
-                    height: 6px;
-                    background: $icon-color;
-                    border-radius: 4px;
-                    cursor: pointer;
 
-                    &::-webkit-slider-thumb {
-                        -webkit-appearance: none;
+                #progress-container{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    gap: 7px;
+                    margin-top: 10px;
+
+                    @include intermediate{
+                        flex-direction: row;
+                        
+                    }
+
+                    #progress{
+                        -webkit-appearance: none; 
                         appearance: none;
-                        width: 10px; 
-                        height: 10px; 
-                        border-radius: 100%;
-                        background: $range-cursor; 
-                        cursor: pointer; 
-                      }
+                        width: 250px;
+                        height: 6px;
+                        background: $icon-color;
+                        border-radius: 4px;
+                        cursor: pointer;
+    
+                        &::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            appearance: none;
+                            width: 10px; 
+                            height: 10px; 
+                            border-radius: 100%;
+                            background: $range-cursor; 
+                            cursor: pointer; 
+                          }
 
-                     
+                    }
+
+                    .time-details{
+                        font-size: 12px;
+                    }
                 }
             }
 
