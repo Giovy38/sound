@@ -96,3 +96,107 @@ songSelect.forEach((song) => {
 });
 
 window.addEventListener("DOMContentLoaded", () => song.pause());
+
+// IMPLEMENT PREW AND NEXT SONG
+
+const prewSong = document.getElementById("prew-song");
+const nextSong = document.getElementById("next-song");
+
+// preview song
+
+prewSong.addEventListener("click", () => {
+  let songImg;
+  let songTitle;
+  let songArtist;
+
+  const playImg = document.getElementById("img-play-song");
+  const playTitle = document.getElementById("song-play-title");
+  const playArtist = document.getElementById("song-play-artist");
+
+  if (source.src !== "http://127.0.0.1:5500/") {
+    switch (source.src) {
+      case "http://127.0.0.1:5500/assets/music/100%20messaggi.mp3":
+        source.src = "http://127.0.0.1:5500/assets/music/lultima%20poesia.mp3";
+        songImg = "/assets/img/lultima poesia.png";
+        songTitle = `l'ultima poesia`;
+        songArtist = "geolier, ultimo";
+        break;
+      case "http://127.0.0.1:5500/assets/music/come%20un%20tuono.mp3":
+        source.src = "http://127.0.0.1:5500/assets/music/100%20messaggi.mp3";
+        songImg = "/assets/img/100 messaggi .png";
+        songTitle = `100 messaggi`;
+        songArtist = "lazza";
+        break;
+      case "http://127.0.0.1:5500/assets/music/dopo%20le%204.mp3":
+        source.src = "http://127.0.0.1:5500/assets/music/come%20un%20tuono.mp3";
+        songImg = "/assets/img/come un tuono .png";
+        songTitle = "come un tuono";
+        songArtist = "rose villain, gue";
+        break;
+      case "http://127.0.0.1:5500/assets/music/lultima%20poesia.mp3":
+        source.src = "http://127.0.0.1:5500/assets/music/dopo%20le%204.mp3";
+        songImg = "/assets/img/dopo le 4.png";
+        songTitle = `dopo le 4`;
+        songArtist = "tony effe, bresh, tedua";
+        break;
+    }
+
+    playImg.src = songImg;
+    playTitle.textContent = songTitle;
+    playArtist.textContent = songArtist;
+
+    songLoad();
+    onPlay();
+  } else {
+    alert("you must choice a song to play first");
+  }
+});
+
+// next song
+
+nextSong.addEventListener("click", () => {
+  let songImg;
+  let songTitle;
+  let songArtist;
+
+  const playImg = document.getElementById("img-play-song");
+  const playTitle = document.getElementById("song-play-title");
+  const playArtist = document.getElementById("song-play-artist");
+  if (source.src !== "http://127.0.0.1:5500/") {
+    switch (source.src) {
+      case "http://127.0.0.1:5500/assets/music/100%20messaggi.mp3":
+        source.src = "http://127.0.0.1:5500/assets/music/come%20un%20tuono.mp3";
+        songImg = "/assets/img/come un tuono .png";
+        songTitle = "come un tuono";
+        songArtist = "rose villain, gue";
+        break;
+      case "http://127.0.0.1:5500/assets/music/come%20un%20tuono.mp3":
+        source.src = "http://127.0.0.1:5500/assets/music/dopo%20le%204.mp3";
+        songImg = "/assets/img/dopo le 4.png";
+        songTitle = `dopo le 4`;
+        songArtist = "tony effe, bresh, tedua";
+        break;
+      case "http://127.0.0.1:5500/assets/music/dopo%20le%204.mp3":
+        source.src = "http://127.0.0.1:5500/assets/music/lultima%20poesia.mp3";
+        songImg = "/assets/img/lultima poesia.png";
+        songTitle = `l'ultima poesia`;
+        songArtist = "geolier, ultimo";
+        break;
+      case "http://127.0.0.1:5500/assets/music/lultima%20poesia.mp3":
+        source.src = "http://127.0.0.1:5500/assets/music/100%20messaggi.mp3";
+        songImg = "/assets/img/100 messaggi .png";
+        songTitle = `100 messaggi`;
+        songArtist = "lazza";
+        break;
+    }
+
+    playImg.src = songImg;
+    playTitle.textContent = songTitle;
+    playArtist.textContent = songArtist;
+
+    songLoad();
+    onPlay();
+  } else {
+    alert("you must choice a song to play first");
+  }
+});
