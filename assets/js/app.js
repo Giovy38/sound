@@ -9,16 +9,20 @@ function songLoad() {
 }
 
 function onPlay() {
-  if (ctrlIcon.classList.contains("bx-pause")) {
-    song.pause();
-    ctrlIcon.classList.remove("bx-pause");
-    ctrlIcon.classList.add("bx-play");
+  if (source.src !== "http://127.0.0.1:5500/") {
+    if (ctrlIcon.classList.contains("bx-pause")) {
+      song.pause();
+      ctrlIcon.classList.remove("bx-pause");
+      ctrlIcon.classList.add("bx-play");
+    } else {
+      song.play();
+      ctrlIcon.classList.add("bx-pause");
+      ctrlIcon.classList.remove("bx-play");
+      progress.max = song.duration;
+      progress.value = song.currentTime;
+    }
   } else {
-    song.play();
-    ctrlIcon.classList.add("bx-pause");
-    ctrlIcon.classList.remove("bx-play");
-    progress.max = song.duration;
-    progress.value = song.currentTime;
+    alert("select a song from list before play");
   }
 }
 
