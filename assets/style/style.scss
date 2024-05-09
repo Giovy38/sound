@@ -409,6 +409,12 @@ body{
                 padding: 15px 50px;
                 justify-content: space-between;
 
+
+                & > :nth-child(2){
+                    order: 2;
+                }
+
+                
             }
 
             #song-play-detail{

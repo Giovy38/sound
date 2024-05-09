@@ -358,6 +358,9 @@ body {
     padding: 15px 50px;
     justify-content: space-between;
   }
+  #app-container #right-section #player-container > :nth-child(2) {
+    order: 2;
+  }
 }
 #app-container #right-section #player-container #song-play-detail {
   display: flex;
