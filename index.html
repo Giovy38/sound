@@ -32,7 +32,10 @@
                 <i class="bx bx-home-alt-2"></i>
                 <p>home</p>
               </div>
-              <div class="icon-div">
+              <div class="icon-div input-div">
+                <input id="input-search" type="text" placeholder="search song info">
+              </div>
+              <div id="srcBtn" class="icon-div">
                 <i class="bx bx-search-alt-2"></i>
                 <p>search</p>
               </div>
@@ -233,6 +236,20 @@
                     </div>
               </div>
 
+              <!-- search album section  -->
+              <div id="search-song-container">
+                <div id="song-found-container">
+                    <div class="img-container">
+                        <img src="/assets/img/logo.jpg" alt="album" id="song-found-img">
+                    </div>
+                    <div class="info-container">
+                        <h3 id="song-found-title">search a song and see some info</h3>
+                        <h4 id="song-found-artist"></h4>
+                        <h4 id="song-found-duration"></h4>
+                    </div>
+                </div>
+              </div>
+
               <!-- player section -->
               <div id="player-container">
                 <div id="song-play-detail">
@@ -269,6 +286,7 @@
           </div>
     </div>
 
+    <script src="/assets/js/spotytest.js"></script>
     <script src="/assets/js/app.js"></script>
   </body>
 </html>

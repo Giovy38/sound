@@ -42,6 +42,12 @@ body{
             flex-direction: column;
             gap: 10px;
             padding: 20px;
+            min-height: 200px;
+
+            @include tablet{
+                align-items: center;
+            }
+
 
             @include intermediate{
                 width: 20vw;
@@ -71,6 +77,25 @@ body{
                 text-transform: capitalize;
                 cursor: pointer;
             }
+
+
+            
+                #input-search{
+                    border-radius: 10px;
+                    text-align: center;
+                    width: 100%;
+                    max-width: 300px;
+                    height: 25px;
+                    text-transform: capitalize;
+                }
+
+                #srcBtn{
+                    &:hover{
+                        color: $wtext;
+                    }
+                }
+            
+
     
         }
     
@@ -251,6 +276,73 @@ body{
                 }
             }
            }
+        }
+
+        #search-song-container{
+            margin-top: 30px;
+            padding: 15px 0;
+            color: $icon-color;
+            background: $container-bg;
+            width: 90vw;
+            border-radius: 20px;
+            text-align: center;
+            text-transform: capitalize;
+            @include flexCenter;
+
+            @include intermediate{
+                height: 300px;
+                width: 75vw;
+            }
+
+            @include tablet{
+                
+            }
+    
+
+            #song-found-container{
+
+                gap: 10px;
+
+                @include tablet{
+                    display: flex;
+                }
+
+                @include intermediate{
+                    flex-direction: column;
+                }
+
+                .img-container{
+                    #song-found-img{
+                        width: 90px;
+                        border-radius: 10px;
+
+                        @include intermediate{
+                            width: 150px;
+                        }
+                    }
+                }
+
+                .info-container{
+                    #song-found-title{
+                        color: $wtext;
+                        font-size: auto;
+                        text-align: center;
+
+                        @include intermediate{
+                            font-size: 25px;
+                        }
+                    }
+
+                    #song-found-artist{
+                        font-size: 15px;
+                    }
+
+                    #song-found-duration{
+                        font-size: 9px;
+                    }
+                }
+
+            }
         }
 
         #player-container{
