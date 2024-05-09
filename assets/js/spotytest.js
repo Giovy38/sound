@@ -4,6 +4,7 @@ const titleFound = document.getElementById("song-found-title");
 const artistFound = document.getElementById("song-found-artist");
 const durationFound = document.getElementById("song-found-duration");
 const inputSong = document.getElementById("input-search");
+const loader = document.getElementById("loader");
 
 btn.addEventListener("click", onSearch);
 
@@ -11,6 +12,7 @@ async function onSearch() {
   songTitle = inputSong.value;
 
   if (songTitle !== "") {
+    loader.style.display = "block";
     const url = `https://spotify-scraper.p.rapidapi.com/v1/track/download?track=${songTitle}`;
     const options = {
       method: "GET",
@@ -34,6 +36,8 @@ async function onSearch() {
       inputSong.value = "";
     } catch (error) {
       console.error(error);
+    } finally {
+      loader.style.display = "none";
     }
   } else {
     alert("insert a song to search");

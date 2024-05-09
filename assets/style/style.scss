@@ -323,6 +323,27 @@ body{
                 }
 
                 .info-container{
+
+                    #loader{
+                        font-size: 20px;
+                        animation-name: loading;
+                        animation-duration: 3s;
+                        animation-iteration-count: infinite;
+                        animation-timing-function: linear;
+                        display: none;
+
+                        @keyframes loading{
+                            from{
+                                transform: rotate(0deg);
+                            } to{
+                                transform: rotate(360deg);
+                            }
+                        }
+
+
+
+                    }
+
                     #song-found-title{
                         color: $wtext;
                         font-size: auto;
