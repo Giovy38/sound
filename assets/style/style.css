@@ -24,12 +24,14 @@ body {
   align-items: center;
   padding: 10px;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
+  margin: 30px 0;
+  width: 95vw;
 }
 @media screen and (min-width: 1226px) {
   #app-container #left-section {
-    height: 100vh;
     padding: 0 10px;
+    width: 30vw;
   }
 }
 #app-container #left-section #primary-container {
@@ -87,170 +89,12 @@ body {
 #app-container #left-section #primary-container #srcBtn:hover {
   color: white;
 }
-#app-container #left-section #library-container {
-  background: rgb(18, 18, 18);
-  width: 90vw;
-  border-radius: 20px;
-}
-@media screen and (min-width: 1226px) {
-  #app-container #left-section #library-container {
-    width: 20vw;
-    min-height: 85vh;
-  }
-}
-#app-container #left-section #library-container .icon-div {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 15px;
-  font-size: 15px;
-  color: rgb(167, 167, 167);
-}
-#app-container #left-section #library-container .icon-div .left-div {
-  display: flex;
-  align-items: center;
-}
-#app-container #left-section #library-container .icon-div i, #app-container #left-section #library-container .icon-div p {
-  cursor: pointer;
-}
-#app-container #left-section #library-container #option-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-  gap: 10px;
-}
-@media screen and (min-width: 1226px) {
-  #app-container #left-section #library-container #option-container {
-    gap: 5px;
-    padding: 5px;
-  }
-}
-#app-container #left-section #library-container #option-container .option {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(41, 41, 41);
-  border-radius: 10px;
-  width: 18vw;
-  color: rgb(167, 167, 167);
-}
-@media screen and (min-width: 1226px) {
-  #app-container #left-section #library-container #option-container .option {
-    width: 8vw;
-  }
-}
-#app-container #left-section #library-container #option-container .option:hover {
-  cursor: pointer;
-  background-color: rgb(167, 167, 167);
-  color: rgb(41, 41, 41);
-}
-#app-container #left-section #library-container .right-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-#app-container #left-section #library-container #recent-container {
-  padding: 0 0 10px 10px;
-}
-#app-container #left-section #library-container #recent-container .single-recent {
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-}
-#app-container #left-section #library-container #recent-container .single-recent:hover {
-  background: rgb(41, 41, 41);
-  cursor: pointer;
-}
-#app-container #left-section #library-container #recent-container .single-recent .left-recent img {
-  width: 60px;
-  border-radius: 10px;
-}
-#app-container #left-section #library-container #recent-container .single-recent .right-recent {
-  margin-left: 20px;
-}
-#app-container #left-section #library-container #recent-container .single-recent .right-recent .recent-title {
-  color: white;
-  text-transform: capitalize;
-}
-#app-container #left-section #library-container #recent-container .single-recent .right-recent .subtitle {
-  display: flex;
-  align-items: center;
-  color: rgb(167, 167, 167);
-  gap: 5px;
-  font-size: 12px;
-}
-#app-container #left-section #library-container #recent-container .single-recent .right-recent .subtitle .bx {
-  font-size: 5px;
-}
-#app-container #right-section {
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-@media screen and (min-width: 1226px) {
-  #app-container #right-section {
-    align-items: flex-start;
-  }
-}
-#app-container #right-section #right-section-title {
-  color: white;
-  text-align: center;
-  margin-bottom: 10px;
-  text-transform: capitalize;
-}
-@media screen and (min-width: 1226px) {
-  #app-container #right-section #right-section-title {
-    width: 75vw;
-  }
-}
-#app-container #right-section #song-container {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  background: rgb(18, 18, 18);
-  width: 90vw;
-  border-radius: 20px;
-  padding: 15px 10px;
-}
-@media screen and (min-width: 1226px) {
-  #app-container #right-section #song-container {
-    height: 500px;
-    width: 75vw;
-  }
-}
-#app-container #right-section #song-container .single-song {
-  display: flex;
-  gap: 10px;
-  cursor: pointer;
-  max-height: 106px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-#app-container #right-section #song-container .single-song:hover {
-  background: rgb(41, 41, 41);
-}
-#app-container #right-section #song-container .single-song .left-img img {
-  height: 105px;
-}
-#app-container #right-section #song-container .single-song .right-info {
-  color: rgb(167, 167, 167);
-  padding: 10px 0;
-  text-transform: capitalize;
-}
-#app-container #right-section #song-container .single-song .right-info .song-title {
-  font-size: 20px;
-  color: white;
-}
-#app-container #right-section #search-song-container {
-  margin-top: 30px;
+#app-container #left-section #search-song-container {
   padding: 15px 0;
   color: rgb(167, 167, 167);
   background: rgb(18, 18, 18);
-  width: 90vw;
   border-radius: 20px;
+  width: 90vw;
   text-align: center;
   text-transform: capitalize;
   display: flex;
@@ -258,34 +102,35 @@ body {
   align-items: center;
 }
 @media screen and (min-width: 1226px) {
-  #app-container #right-section #search-song-container {
+  #app-container #left-section #search-song-container {
     height: 300px;
-    width: 75vw;
+    width: 20vw;
   }
 }
-#app-container #right-section #search-song-container #song-found-container {
+#app-container #left-section #search-song-container #song-found-container {
   gap: 10px;
 }
 @media screen and (min-width: 768px) {
-  #app-container #right-section #search-song-container #song-found-container {
+  #app-container #left-section #search-song-container #song-found-container {
     display: flex;
+    align-items: center;
   }
 }
 @media screen and (min-width: 1226px) {
-  #app-container #right-section #search-song-container #song-found-container {
+  #app-container #left-section #search-song-container #song-found-container {
     flex-direction: column;
   }
 }
-#app-container #right-section #search-song-container #song-found-container .img-container #song-found-img {
+#app-container #left-section #search-song-container #song-found-container .img-container #song-found-img {
   width: 90px;
   border-radius: 10px;
 }
 @media screen and (min-width: 1226px) {
-  #app-container #right-section #search-song-container #song-found-container .img-container #song-found-img {
+  #app-container #left-section #search-song-container #song-found-container .img-container #song-found-img {
     width: 150px;
   }
 }
-#app-container #right-section #search-song-container #song-found-container .info-container #loader {
+#app-container #left-section #search-song-container #song-found-container .info-container #loader {
   font-size: 20px;
   animation-name: loading;
   animation-duration: 3s;
@@ -301,21 +146,181 @@ body {
     transform: rotate(360deg);
   }
 }
-#app-container #right-section #search-song-container #song-found-container .info-container #song-found-title {
+#app-container #left-section #search-song-container #song-found-container .info-container #song-found-title {
   color: white;
   font-size: auto;
   text-align: center;
 }
 @media screen and (min-width: 1226px) {
-  #app-container #right-section #search-song-container #song-found-container .info-container #song-found-title {
+  #app-container #left-section #search-song-container #song-found-container .info-container #song-found-title {
     font-size: 25px;
   }
 }
-#app-container #right-section #search-song-container #song-found-container .info-container #song-found-artist {
+#app-container #left-section #search-song-container #song-found-container .info-container #song-found-artist {
   font-size: 15px;
 }
-#app-container #right-section #search-song-container #song-found-container .info-container #song-found-duration {
+#app-container #left-section #search-song-container #song-found-container .info-container #song-found-duration {
   font-size: 9px;
+}
+#app-container #left-section #select-song-title {
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+@media screen and (min-width: 1226px) {
+  #app-container #left-section #select-song-title {
+    width: 75vw;
+  }
+}
+#app-container #left-section #song-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: rgb(18, 18, 18);
+  width: 90vw;
+  border-radius: 20px;
+  padding: 15px 10px;
+}
+@media screen and (min-width: 1226px) {
+  #app-container #left-section #song-container {
+    height: 500px;
+    width: 20vw;
+  }
+}
+#app-container #left-section #song-container .single-song {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  max-height: 106px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#app-container #left-section #song-container .single-song:hover {
+  background: rgb(41, 41, 41);
+}
+#app-container #left-section #song-container .single-song .left-img img {
+  height: 105px;
+}
+#app-container #left-section #song-container .single-song .right-info {
+  color: rgb(167, 167, 167);
+  padding: 10px 0;
+  text-transform: capitalize;
+}
+#app-container #left-section #song-container .single-song .right-info .song-title {
+  font-size: 20px;
+  color: white;
+}
+#app-container #right-section {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 95vw;
+}
+@media screen and (min-width: 1226px) {
+  #app-container #right-section {
+    align-items: flex-start;
+    width: 70vw;
+  }
+}
+#app-container #right-section #library-container {
+  background: rgb(18, 18, 18);
+  width: 90vw;
+  border-radius: 20px;
+}
+@media screen and (min-width: 1226px) {
+  #app-container #right-section #library-container {
+    width: 65vw;
+    height: 85vh;
+  }
+}
+#app-container #right-section #library-container .icon-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  font-size: 15px;
+  color: rgb(167, 167, 167);
+}
+#app-container #right-section #library-container .icon-div .left-div {
+  display: flex;
+  align-items: center;
+}
+#app-container #right-section #library-container .icon-div i, #app-container #right-section #library-container .icon-div p {
+  cursor: pointer;
+}
+#app-container #right-section #library-container #option-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  gap: 10px;
+}
+@media screen and (min-width: 1226px) {
+  #app-container #right-section #library-container #option-container {
+    gap: 5px;
+    padding: 5px;
+  }
+}
+#app-container #right-section #library-container #option-container .option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(41, 41, 41);
+  border-radius: 10px;
+  width: 18vw;
+  color: rgb(167, 167, 167);
+}
+@media screen and (min-width: 1226px) {
+  #app-container #right-section #library-container #option-container .option {
+    width: 8vw;
+  }
+}
+#app-container #right-section #library-container #option-container .option:hover {
+  cursor: pointer;
+  background-color: rgb(167, 167, 167);
+  color: rgb(41, 41, 41);
+}
+#app-container #right-section #library-container .right-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#app-container #right-section #library-container #recent-container {
+  padding: 0 0 10px 10px;
+}
+#app-container #right-section #library-container #recent-container .single-recent {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+#app-container #right-section #library-container #recent-container .single-recent:hover {
+  background: rgb(41, 41, 41);
+  cursor: pointer;
+}
+#app-container #right-section #library-container #recent-container .single-recent .left-recent img {
+  width: 60px;
+  border-radius: 10px;
+}
+#app-container #right-section #library-container #recent-container .single-recent .right-recent {
+  margin-left: 20px;
+}
+#app-container #right-section #library-container #recent-container .single-recent .right-recent .recent-title {
+  color: white;
+  text-transform: capitalize;
+}
+#app-container #right-section #library-container #recent-container .single-recent .right-recent .subtitle {
+  display: flex;
+  align-items: center;
+  color: rgb(167, 167, 167);
+  gap: 5px;
+  font-size: 12px;
+}
+#app-container #right-section #library-container #recent-container .single-recent .right-recent .subtitle .bx {
+  font-size: 5px;
 }
 #app-container #right-section #player-container {
   margin-top: 30px;
@@ -331,7 +336,7 @@ body {
 }
 @media screen and (min-width: 1226px) {
   #app-container #right-section #player-container {
-    width: 75vw;
+    width: 65vw;
   }
 }
 #app-container #right-section #player-container #song-play-detail {

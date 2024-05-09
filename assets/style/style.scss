@@ -25,11 +25,13 @@ body{
         @include flexCenter;
         padding: 10px;
         flex-direction: column;
-        gap: 20px;
+        gap: 5px;
+        margin: 30px 0;
+        width: 95vw;
 
         @include intermediate{
-            height: 100vh;
             padding: 0 10px;
+            width: 30vw;
         }
 
         #primary-container{
@@ -98,15 +100,178 @@ body{
 
     
         }
+
+        #search-song-container{
+            padding: 15px 0;
+            color: $icon-color;
+            background: $container-bg;
+            border-radius: 20px;
+            width: 90vw;
+            text-align: center;
+            text-transform: capitalize;
+            @include flexCenter;
+
+            @include intermediate{
+                height: 300px;
+                width: 20vw;
+            }
+
+
+            #song-found-container{
+
+                gap: 10px;
+
+                @include tablet{
+                    display: flex;
+                    align-items: center;
+                }
+
+                @include intermediate{
+                    flex-direction: column;
+                }
+
+                .img-container{
+                    #song-found-img{
+                        width: 90px;
+                        border-radius: 10px;
+
+                        @include intermediate{
+                            width: 150px;
+                        }
+                    }
+                }
+
+                .info-container{
+
+                    #loader{
+                        font-size: 20px;
+                        animation-name: loading;
+                        animation-duration: 3s;
+                        animation-iteration-count: infinite;
+                        animation-timing-function: linear;
+                        display: none;
+
+                        @keyframes loading{
+                            from{
+                                transform: rotate(0deg);
+                            } to{
+                                transform: rotate(360deg);
+                            }
+                        }
+
+
+
+                    }
+
+                    #song-found-title{
+                        color: $wtext;
+                        font-size: auto;
+                        text-align: center;
+
+                        @include intermediate{
+                            font-size: 25px;
+                        }
+                    }
+
+                    #song-found-artist{
+                        font-size: 15px;
+                    }
+
+                    #song-found-duration{
+                        font-size: 9px;
+                    }
+                }
+
+            }
+        }
+
+        #select-song-title{
+            color: $wtext;
+            text-align: center;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+
+            @include intermediate {
+                width: 75vw;
+            }
+        }
+
+        #song-container{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: $container-bg;
+            width: 90vw;
+            border-radius: 20px;
+            padding: 15px 10px;
+
+
+            @include intermediate{
+                height: 500px;
+                width: 20vw;
+            }
     
+    
+    
+           .single-song{
+            display: flex;
+            gap: 10px;
+            cursor: pointer;
+            max-height: 106px;
+            border-radius: 10px;
+            overflow: hidden;
+    
+            &:hover{
+            background: $container-bg-hover;
+    
+            }
+    
+            .left-img{
+                img{
+                    height: 105px;
+                }
+            }
+    
+            .right-info{
+                color: $icon-color;
+                padding: 10px 0;
+                text-transform: capitalize;
+    
+                .song-title{
+                    font-size: 20px;
+                    color: $wtext;
+                }
+            }
+           }
+        }
+    
+       
+    }
+    
+    #right-section{
+        margin-bottom: 30px;
+        @include flexCenter;
+        flex-direction: column;
+        gap: 20px;
+        width: 95vw;
+
+        @include intermediate{
+            align-items: flex-start;
+            width: 70vw;
+        }
+
+       
+    
+       
+
         #library-container{
             background: $container-bg;
             width: 90vw;
             border-radius: 20px;
 
             @include intermediate{
-                width: 20vw;
-                min-height: 85vh;
+                width: 65vw;
+                height: 85vh;
             }
     
             // icon div 
@@ -208,164 +373,7 @@ body{
             }
     
         }
-    }
-    
-    #right-section{
-        margin-bottom: 50px;
-        @include flexCenter;
-        flex-direction: column;
 
-        @include intermediate{
-            align-items: flex-start;
-        }
-
-        #right-section-title{
-            color: $wtext;
-            text-align: center;
-            margin-bottom: 10px;
-            text-transform: capitalize;
-
-            @include intermediate {
-                width: 75vw;
-            }
-        }
-    
-        #song-container{
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            background: $container-bg;
-            width: 90vw;
-            border-radius: 20px;
-            padding: 15px 10px;
-
-
-            @include intermediate{
-                height: 500px;
-                width: 75vw;
-            }
-    
-    
-    
-           .single-song{
-            display: flex;
-            gap: 10px;
-            cursor: pointer;
-            max-height: 106px;
-            border-radius: 10px;
-            overflow: hidden;
-    
-            &:hover{
-            background: $container-bg-hover;
-    
-            }
-    
-            .left-img{
-                img{
-                    height: 105px;
-                }
-            }
-    
-            .right-info{
-                color: $icon-color;
-                padding: 10px 0;
-                text-transform: capitalize;
-    
-                .song-title{
-                    font-size: 20px;
-                    color: $wtext;
-                }
-            }
-           }
-        }
-
-        #search-song-container{
-            margin-top: 30px;
-            padding: 15px 0;
-            color: $icon-color;
-            background: $container-bg;
-            width: 90vw;
-            border-radius: 20px;
-            text-align: center;
-            text-transform: capitalize;
-            @include flexCenter;
-
-            @include intermediate{
-                height: 300px;
-                width: 75vw;
-            }
-
-            @include tablet{
-                
-            }
-    
-
-            #song-found-container{
-
-                gap: 10px;
-
-                @include tablet{
-                    display: flex;
-                }
-
-                @include intermediate{
-                    flex-direction: column;
-                }
-
-                .img-container{
-                    #song-found-img{
-                        width: 90px;
-                        border-radius: 10px;
-
-                        @include intermediate{
-                            width: 150px;
-                        }
-                    }
-                }
-
-                .info-container{
-
-                    #loader{
-                        font-size: 20px;
-                        animation-name: loading;
-                        animation-duration: 3s;
-                        animation-iteration-count: infinite;
-                        animation-timing-function: linear;
-                        display: none;
-
-                        @keyframes loading{
-                            from{
-                                transform: rotate(0deg);
-                            } to{
-                                transform: rotate(360deg);
-                            }
-                        }
-
-
-
-                    }
-
-                    #song-found-title{
-                        color: $wtext;
-                        font-size: auto;
-                        text-align: center;
-
-                        @include intermediate{
-                            font-size: 25px;
-                        }
-                    }
-
-                    #song-found-artist{
-                        font-size: 15px;
-                    }
-
-                    #song-found-duration{
-                        font-size: 9px;
-                    }
-                }
-
-            }
-        }
 
         #player-container{
             margin-top: 30px;
@@ -378,7 +386,7 @@ body{
             flex-direction: column;
 
             @include intermediate{
-                width: 75vw;
+                width: 65vw;
             }
 
             #song-play-detail{
