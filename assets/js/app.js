@@ -108,36 +108,45 @@ prewSong.addEventListener("click", () => {
   let songImg;
   let songTitle;
   let songArtist;
+  let songPosition;
 
   const playImg = document.getElementById("img-play-song");
   const playTitle = document.getElementById("song-play-title");
   const playArtist = document.getElementById("song-play-artist");
 
+  // select all single song to take info
+
+  const playableSong = document.querySelectorAll(".single-song");
+
   if (source.src !== "http://127.0.0.1:5500/") {
     switch (source.src) {
       case "http://127.0.0.1:5500/assets/music/100%20messaggi.mp3":
+        songPosition = 3;
         source.src = "http://127.0.0.1:5500/assets/music/lultima%20poesia.mp3";
-        songImg = "/assets/img/lultima poesia.png";
-        songTitle = `l'ultima poesia`;
-        songArtist = "geolier, ultimo";
+        songImg = `${playableSong[songPosition].children[0].children[0].src}`;
+        songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
+        songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
         break;
       case "http://127.0.0.1:5500/assets/music/come%20un%20tuono.mp3":
+        songPosition = 0;
         source.src = "http://127.0.0.1:5500/assets/music/100%20messaggi.mp3";
-        songImg = "/assets/img/100 messaggi .png";
-        songTitle = `100 messaggi`;
-        songArtist = "lazza";
+        songImg = `${playableSong[songPosition].children[0].children[0].src}`;
+        songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
+        songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
         break;
       case "http://127.0.0.1:5500/assets/music/dopo%20le%204.mp3":
+        songPosition = 1;
         source.src = "http://127.0.0.1:5500/assets/music/come%20un%20tuono.mp3";
-        songImg = "/assets/img/come un tuono .png";
-        songTitle = "come un tuono";
-        songArtist = "rose villain, gue";
+        songImg = `${playableSong[songPosition].children[0].children[0].src}`;
+        songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
+        songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
         break;
       case "http://127.0.0.1:5500/assets/music/lultima%20poesia.mp3":
+        songPosition = 2;
         source.src = "http://127.0.0.1:5500/assets/music/dopo%20le%204.mp3";
-        songImg = "/assets/img/dopo le 4.png";
-        songTitle = `dopo le 4`;
-        songArtist = "tony effe, bresh, tedua";
+        songImg = `${playableSong[songPosition].children[0].children[0].src}`;
+        songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
+        songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
         break;
     }
 
@@ -158,35 +167,45 @@ nextSong.addEventListener("click", () => {
   let songImg;
   let songTitle;
   let songArtist;
+  let songPosition;
 
   const playImg = document.getElementById("img-play-song");
   const playTitle = document.getElementById("song-play-title");
   const playArtist = document.getElementById("song-play-artist");
+
+  // select all single song to take info
+
+  const playableSong = document.querySelectorAll(".single-song");
+
   if (source.src !== "http://127.0.0.1:5500/") {
     switch (source.src) {
       case "http://127.0.0.1:5500/assets/music/100%20messaggi.mp3":
+        songPosition = 1;
         source.src = "http://127.0.0.1:5500/assets/music/come%20un%20tuono.mp3";
-        songImg = "/assets/img/come un tuono .png";
-        songTitle = "come un tuono";
-        songArtist = "rose villain, gue";
+        songImg = `${playableSong[songPosition].children[0].children[0].src}`;
+        songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
+        songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
         break;
       case "http://127.0.0.1:5500/assets/music/come%20un%20tuono.mp3":
+        songPosition = 2;
         source.src = "http://127.0.0.1:5500/assets/music/dopo%20le%204.mp3";
-        songImg = "/assets/img/dopo le 4.png";
-        songTitle = `dopo le 4`;
-        songArtist = "tony effe, bresh, tedua";
+        songImg = `${playableSong[songPosition].children[0].children[0].src}`;
+        songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
+        songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
         break;
       case "http://127.0.0.1:5500/assets/music/dopo%20le%204.mp3":
+        songPosition = 3;
         source.src = "http://127.0.0.1:5500/assets/music/lultima%20poesia.mp3";
-        songImg = "/assets/img/lultima poesia.png";
-        songTitle = `l'ultima poesia`;
-        songArtist = "geolier, ultimo";
+        songImg = `${playableSong[songPosition].children[0].children[0].src}`;
+        songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
+        songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
         break;
       case "http://127.0.0.1:5500/assets/music/lultima%20poesia.mp3":
+        songPosition = 0;
         source.src = "http://127.0.0.1:5500/assets/music/100%20messaggi.mp3";
-        songImg = "/assets/img/100 messaggi .png";
-        songTitle = `100 messaggi`;
-        songArtist = "lazza";
+        songImg = `${playableSong[songPosition].children[0].children[0].src}`;
+        songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
+        songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
         break;
     }
 
