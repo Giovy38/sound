@@ -17,7 +17,7 @@ body{
 
     @include intermediate{
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         
     }
 
@@ -32,6 +32,7 @@ body{
         @include intermediate{
             padding: 0 10px;
             width: 30vw;
+            min-height: 100vh;
         }
 
         #primary-container{
@@ -186,7 +187,10 @@ body{
         }
 
         #select-song-title{
-            color: $wtext;
+            background: linear-gradient(to right, $range-light, $range-light); 
+            color: transparent;
+            background-clip: text;
+            -webkit-text-fill-color: linear-gradient(to right, $range-light, $range-light);
             text-align: center;
             margin-bottom: 10px;
             text-transform: capitalize;
@@ -249,7 +253,7 @@ body{
     }
     
     #right-section{
-        margin-bottom: 30px;
+        margin-bottom: 350px;
         @include flexCenter;
         flex-direction: column;
         gap: 20px;
@@ -385,8 +389,18 @@ body{
             @include flexCenter;
             flex-direction: column;
 
+            position: fixed;;
+            bottom: 15px;
+            z-index: 5;
+            opacity: 95%;
+            box-shadow: -2px -2px 4px $wtext;
+
             @include intermediate{
                 width: 65vw;
+                bottom: 0;
+                opacity: 100%;
+                position: static;
+                box-shadow: none;
             }
 
             #song-play-detail{
@@ -419,37 +433,63 @@ body{
                     display: flex;
                     flex-direction: column;
                     align-items: flex-end;
+                    justify-content: center;
                     gap: 7px;
                     margin-top: 10px;
 
                     @include intermediate{
                         flex-direction: row;
-                        
-                    }
-
-                    #progress{
-                        -webkit-appearance: none; 
-                        appearance: none;
-                        width: 250px;
-                        height: 6px;
-                        background: $icon-color;
-                        border-radius: 4px;
-                        cursor: pointer;
-    
-                        &::-webkit-slider-thumb {
-                            -webkit-appearance: none;
-                            appearance: none;
-                            width: 10px; 
-                            height: 10px; 
-                            border-radius: 100%;
-                            background: $range-cursor; 
-                            cursor: pointer; 
-                          }
-
                     }
 
                     .time-details{
                         font-size: 12px;
+                    }
+                }
+
+                .range-input{
+                    -webkit-appearance: none; 
+                    appearance: none;
+                    width: 250px;
+                    height: 6px;
+                    background: $icon-color;
+                    border-radius: 4px;
+                    cursor: pointer;
+
+                    &::-webkit-slider-thumb {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        width: 10px; 
+                        height: 10px; 
+                        border-radius: 100%;
+                        background: $range-cursor; 
+                        cursor: pointer; 
+                      }
+
+                }
+
+                #volumeSlider{
+                    background: linear-gradient(to right,$range-light, $range-cursor);
+                    margin-top: 5px;
+                    height: 8px;
+                    
+                    &::-webkit-slider-thumb {
+                        background: $range-dark;
+                        border: 0.3px solid white;
+                    }
+
+                   
+                }
+
+                .volume-container{
+                    gap: 10px;
+                    margin-top: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    @include intermediate{
+                        flex-direction: row;
+                        margin-top: 30px;
                     }
                 }
             }

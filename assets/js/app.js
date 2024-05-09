@@ -219,3 +219,12 @@ nextSong.addEventListener("click", () => {
     alert("you must choice a song to play first");
   }
 });
+
+// SET VOLUME
+
+const slider = document.getElementById("volumeSlider");
+const audio = document.getElementById("song");
+
+slider.oninput = function () {
+  audio.volume = this.value;
+};

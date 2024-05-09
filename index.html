@@ -130,9 +130,14 @@
               </audio>
               <div id="progress-container">
                 <p id="current-time" class="time-details"></p>
-                <input id="progress" type="range" value="0" />
+                <input id="progress" class="range-input" type="range" value="0" />
                 <p id="song-duration" class="time-details"></p>
               </div>
+              <div class="volume-container">
+                <i class='bx bx-volume-low'></i>
+                <input type="range" id="volumeSlider" class="range-input" min="0" max="1" step="0.1" value="0.1">
+                <i class='bx bx-volume-full' ></i>
+            </div>
             </div>
             <div class="icon-container">
               <i id="prew-song" class="bx bx-chevrons-left"></i>

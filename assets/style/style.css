@@ -15,7 +15,7 @@ body {
 @media screen and (min-width: 1226px) {
   #app-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 #app-container #left-section {
@@ -32,6 +32,7 @@ body {
   #app-container #left-section {
     padding: 0 10px;
     width: 30vw;
+    min-height: 100vh;
   }
 }
 #app-container #left-section #primary-container {
@@ -163,7 +164,11 @@ body {
   font-size: 9px;
 }
 #app-container #left-section #select-song-title {
-  color: white;
+  background: linear-gradient(to right, rgba(114, 230, 187, 0.5960784314), rgba(114, 230, 187, 0.5960784314));
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: linear-gradient(to right, rgba(114, 230, 187, 0.5960784314), rgba(114, 230, 187, 0.5960784314));
   text-align: center;
   margin-bottom: 10px;
   text-transform: capitalize;
@@ -212,7 +217,7 @@ body {
   color: white;
 }
 #app-container #right-section {
-  margin-bottom: 30px;
+  margin-bottom: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -333,10 +338,19 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: fixed;
+  bottom: 15px;
+  z-index: 5;
+  opacity: 95%;
+  box-shadow: -2px -2px 4px white;
 }
 @media screen and (min-width: 1226px) {
   #app-container #right-section #player-container {
     width: 65vw;
+    bottom: 0;
+    opacity: 100%;
+    position: static;
+    box-shadow: none;
   }
 }
 #app-container #right-section #player-container #song-play-detail {
@@ -360,6 +374,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: center;
   gap: 7px;
   margin-top: 10px;
 }
@@ -368,7 +383,10 @@ body {
     flex-direction: row;
   }
 }
-#app-container #right-section #player-container .time-container #progress-container #progress {
+#app-container #right-section #player-container .time-container #progress-container .time-details {
+  font-size: 12px;
+}
+#app-container #right-section #player-container .time-container .range-input {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -378,7 +396,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
-#app-container #right-section #player-container .time-container #progress-container #progress::-webkit-slider-thumb {
+#app-container #right-section #player-container .time-container .range-input::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 10px;
@@ -387,8 +405,27 @@ body {
   background: #04AA6D;
   cursor: pointer;
 }
-#app-container #right-section #player-container .time-container #progress-container .time-details {
-  font-size: 12px;
+#app-container #right-section #player-container .time-container #volumeSlider {
+  background: linear-gradient(to right, rgba(114, 230, 187, 0.5960784314), #04AA6D);
+  margin-top: 5px;
+  height: 8px;
+}
+#app-container #right-section #player-container .time-container #volumeSlider::-webkit-slider-thumb {
+  background: rgba(7, 95, 63, 0.8274509804);
+  border: 0.3px solid white;
+}
+#app-container #right-section #player-container .time-container .volume-container {
+  gap: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media screen and (min-width: 1226px) {
+  #app-container #right-section #player-container .time-container .volume-container {
+    flex-direction: row;
+    margin-top: 30px;
+  }
 }
 #app-container #right-section #player-container .icon-container {
   font-size: 30px;
