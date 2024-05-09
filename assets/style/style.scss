@@ -401,6 +401,14 @@ body{
                 opacity: 100%;
                 position: static;
                 box-shadow: none;
+
+                flex-direction: row;
+                min-height: 150px;
+                gap: 35px;
+                align-items: center;
+                padding: 15px 50px;
+                justify-content: space-between;
+
             }
 
             #song-play-detail{
@@ -410,6 +418,9 @@ body{
                 #img-play-song{
                         width: 60px;
                     
+                        @include intermediate{
+                            width: 130px;
+                        }
                 }
 
                 #song-title-artist-container{

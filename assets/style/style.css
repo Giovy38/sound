@@ -351,6 +351,12 @@ body {
     opacity: 100%;
     position: static;
     box-shadow: none;
+    flex-direction: row;
+    min-height: 150px;
+    gap: 35px;
+    align-items: center;
+    padding: 15px 50px;
+    justify-content: space-between;
   }
 }
 #app-container #right-section #player-container #song-play-detail {
@@ -359,6 +365,11 @@ body {
 }
 #app-container #right-section #player-container #song-play-detail #img-play-song {
   width: 60px;
+}
+@media screen and (min-width: 1226px) {
+  #app-container #right-section #player-container #song-play-detail #img-play-song {
+    width: 130px;
+  }
 }
 #app-container #right-section #player-container #song-play-detail #song-title-artist-container {
   text-transform: capitalize;
