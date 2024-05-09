@@ -228,7 +228,8 @@ body {
 @media screen and (min-width: 1226px) {
   #app-container #right-section {
     align-items: flex-start;
-    width: 70vw;
+    width: 60vw;
+    margin-bottom: 100px;
   }
 }
 #app-container #right-section #library-container {

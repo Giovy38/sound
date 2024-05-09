@@ -76,17 +76,17 @@ songSelect.forEach((song) => {
     const songPlay = document.getElementById("source");
 
     switch (songTitle) {
-      case "100 messaggi":
-        songPlay.src = "/assets/music/100 messaggi.mp3";
+      case "shine":
+        songPlay.src = "/assets/music/spektrem shine.mp4";
         break;
-      case "come un tuono":
-        songPlay.src = "/assets/music/come un tuono.mp3";
+      case "mortals":
+        songPlay.src = "/assets/music/Warriyo - Mortals.mp4";
         break;
-      case "dopo le 4":
-        songPlay.src = "/assets/music/dopo le 4.mp3";
+      case "heroes tonight":
+        songPlay.src = "/assets/music/janji - heroes tonight .mp4";
         break;
-      case `l'ultima poesia`:
-        songPlay.src = "/assets/music/lultima poesia.mp3";
+      case `on & on`:
+        songPlay.src = "/assets/music/cartoon, jeja - on & on.mp4";
         break;
     }
 
@@ -118,32 +118,37 @@ prewSong.addEventListener("click", () => {
 
   const playableSong = document.querySelectorAll(".single-song");
 
+  console.log(source.src);
+
   if (source.src !== "http://127.0.0.1:5500/") {
     switch (source.src) {
-      case "http://127.0.0.1:5500/assets/music/100%20messaggi.mp3":
+      case "http://127.0.0.1:5500/assets/music/spektrem%20shine.mp4":
         songPosition = 3;
-        source.src = "http://127.0.0.1:5500/assets/music/lultima%20poesia.mp3";
+        source.src =
+          "http://127.0.0.1:5500/assets/music/cartoon,%20jeja%20-%20on%20&%20on.mp4";
         songImg = `${playableSong[songPosition].children[0].children[0].src}`;
         songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
         songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
         break;
-      case "http://127.0.0.1:5500/assets/music/come%20un%20tuono.mp3":
+      case "http://127.0.0.1:5500/assets/music/Warriyo%20-%20Mortals.mp4":
         songPosition = 0;
-        source.src = "http://127.0.0.1:5500/assets/music/100%20messaggi.mp3";
+        source.src = "http://127.0.0.1:5500/assets/music/spektrem%20shine.mp4";
         songImg = `${playableSong[songPosition].children[0].children[0].src}`;
         songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
         songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
         break;
-      case "http://127.0.0.1:5500/assets/music/dopo%20le%204.mp3":
+      case "http://127.0.0.1:5500/assets/music/janji%20-%20heroes%20tonight%20.mp4":
         songPosition = 1;
-        source.src = "http://127.0.0.1:5500/assets/music/come%20un%20tuono.mp3";
+        source.src =
+          "http://127.0.0.1:5500/assets/music/Warriyo%20-%20Mortals.mp4";
         songImg = `${playableSong[songPosition].children[0].children[0].src}`;
         songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
         songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
         break;
-      case "http://127.0.0.1:5500/assets/music/lultima%20poesia.mp3":
+      case "http://127.0.0.1:5500/assets/music/cartoon,%20jeja%20-%20on%20&%20on.mp4":
         songPosition = 2;
-        source.src = "http://127.0.0.1:5500/assets/music/dopo%20le%204.mp3";
+        source.src =
+          "http://127.0.0.1:5500/assets/music/janji%20-%20heroes%20tonight%20.mp4";
         songImg = `${playableSong[songPosition].children[0].children[0].src}`;
         songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
         songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
@@ -179,30 +184,33 @@ nextSong.addEventListener("click", () => {
 
   if (source.src !== "http://127.0.0.1:5500/") {
     switch (source.src) {
-      case "http://127.0.0.1:5500/assets/music/100%20messaggi.mp3":
+      case "http://127.0.0.1:5500/assets/music/spektrem%20shine.mp4":
         songPosition = 1;
-        source.src = "http://127.0.0.1:5500/assets/music/come%20un%20tuono.mp3";
+        source.src =
+          "http://127.0.0.1:5500/assets/music/Warriyo%20-%20Mortals.mp4";
         songImg = `${playableSong[songPosition].children[0].children[0].src}`;
         songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
         songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
         break;
-      case "http://127.0.0.1:5500/assets/music/come%20un%20tuono.mp3":
+      case "http://127.0.0.1:5500/assets/music/Warriyo%20-%20Mortals.mp4":
         songPosition = 2;
-        source.src = "http://127.0.0.1:5500/assets/music/dopo%20le%204.mp3";
+        source.src =
+          "http://127.0.0.1:5500/assets/music/janji%20-%20heroes%20tonight%20.mp4";
         songImg = `${playableSong[songPosition].children[0].children[0].src}`;
         songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
         songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
         break;
-      case "http://127.0.0.1:5500/assets/music/dopo%20le%204.mp3":
+      case "http://127.0.0.1:5500/assets/music/janji%20-%20heroes%20tonight%20.mp4":
         songPosition = 3;
-        source.src = "http://127.0.0.1:5500/assets/music/lultima%20poesia.mp3";
+        source.src =
+          "http://127.0.0.1:5500/assets/music/cartoon,%20jeja%20-%20on%20&%20on.mp4";
         songImg = `${playableSong[songPosition].children[0].children[0].src}`;
         songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
         songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
         break;
-      case "http://127.0.0.1:5500/assets/music/lultima%20poesia.mp3":
+      case "http://127.0.0.1:5500/assets/music/cartoon,%20jeja%20-%20on%20&%20on.mp4":
         songPosition = 0;
-        source.src = "http://127.0.0.1:5500/assets/music/100%20messaggi.mp3";
+        source.src = "http://127.0.0.1:5500/assets/music/spektrem%20shine.mp4";
         songImg = `${playableSong[songPosition].children[0].children[0].src}`;
         songTitle = `${playableSong[songPosition].children[1].children[0].textContent}`;
         songArtist = `${playableSong[songPosition].children[1].children[1].textContent}`;
