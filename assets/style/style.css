@@ -435,6 +435,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  #app-container #right-section #player-container .time-container .volume-container {
+    display: flex;
+  }
 }
 @media screen and (min-width: 1226px) {
   #app-container #right-section #player-container .time-container .volume-container {
