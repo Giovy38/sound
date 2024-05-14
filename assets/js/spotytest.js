@@ -11,7 +11,7 @@ btn.addEventListener("click", onSearch);
 async function onSearch() {
   songTitle = inputSong.value;
 
-  if (songTitle !== "") {
+  if (songTitle.trim() !== "") {
     loader.style.display = "block";
     const url = `https://spotify-scraper.p.rapidapi.com/v1/track/download?track=${songTitle}`;
     const options = {
